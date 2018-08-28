@@ -1,8 +1,7 @@
 class SaludosController < ApplicationController
   
   def index
-  	name='Bienvenido;)'
-  	@res=hola(name);
+  
   end
 
   def tables
