@@ -32,17 +32,17 @@ class CarsController < ApplicationController
     #             color: params[:car][:color],
     #             year: params[:car][:year])
 
- 
+    respond_to do |format|
       if @car.save
         # Redirecciona al id del carro
         # format.html { redirect_to @car, notice: 'Car was successfully created.' } 
-         redirect_to '/cars'
-         
+        format.html { redirect_to '/cars', notice: 'Car was successfully created.' }
+        format.json { render :show, status: :created, location: @car }
       else
-        # format.html { render :new }
-        render :new
-        # format.json { render json: @car.errors.full_messages, status: :unprocessable_entity }
+        format.html { render :new }
+        format.json { render json: @car.errors, status: :unprocessable_entity }
       end
+    end
   end
 
   # PATCH/PUT /cars/1
