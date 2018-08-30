@@ -28,6 +28,7 @@ class CarsController < ApplicationController
     @car = Car.new(car_params)
 
     # Segunda opcion para agregar el registro
+    # No segura SQL Injection
     # @car=Car.new(make: params[:car][:make],
     #             color: params[:car][:color],
     #             year: params[:car][:year])
@@ -50,6 +51,7 @@ class CarsController < ApplicationController
   def update
     respond_to do |format|
       if @car.update(car_params)
+        # @car.update_attributes({make: 'nissan'})
         format.html { redirect_to @car, notice: 'Car was successfully updated.' }
         format.json { render :show, status: :ok, location: @car }
       else
