@@ -1,0 +1,12 @@
+<h1>New Car</h1>
+
+<!-- <%= render 'form', car: @car %> -->
+
+<%= form_for(@car) do |f| %>
+	<%= f.text_field :make, placeholder: "Marca" %>
+	<%= f.text_field :color, placeholder: "Color" %>
+	<%= f.text_field :year, placeholder: "Anho" %>
+	<%= f.submit "Save" %>
+<% end %>
+
+<%= link_to 'Back', cars_path %>
