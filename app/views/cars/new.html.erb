@@ -3,6 +3,11 @@
 <!-- <%= render 'form', car: @car %> -->
 
 <%= form_for(@car) do |f| %>
+
+<% @car.errors.full_messages.each do |message| %>
+	* <%= message %>
+<% end %>
+
 	<%= f.text_field :make, placeholder: "Marca" %>
 	<%= f.text_field :color, placeholder: "Color" %>
 	<%= f.text_field :year, placeholder: "Anho" %>

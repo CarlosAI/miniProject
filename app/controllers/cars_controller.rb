@@ -27,15 +27,22 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
 
-    respond_to do |format|
+    # Segunda opcion para agregar el registro
+    # @car=Car.new(make: params[:car][:make],
+    #             color: params[:car][:color],
+    #             year: params[:car][:year])
+
+ 
       if @car.save
-        format.html { redirect_to @car, notice: 'Car was successfully created.' }
-        format.json { render :show, status: :created, location: @car }
+        # Redirecciona al id del carro
+        # format.html { redirect_to @car, notice: 'Car was successfully created.' } 
+         redirect_to '/cars'
+         
       else
-        format.html { render :new }
-        format.json { render json: @car.errors, status: :unprocessable_entity }
+        # format.html { render :new }
+        render :new
+        # format.json { render json: @car.errors.full_messages, status: :unprocessable_entity }
       end
-    end
   end
 
   # PATCH/PUT /cars/1
