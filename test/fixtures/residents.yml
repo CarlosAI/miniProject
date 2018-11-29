@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  num_habitacion: 
+  nombre_cliente: MyString
+  fecha_llegada: 2018-11-29
+  fecha_salida: 2018-11-29
+
+two:
+  nombre: MyString
+  num_habitacion: 
+  nombre_cliente: MyString
+  fecha_llegada: 2018-11-29
+  fecha_salida: 2018-11-29
