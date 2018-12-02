@@ -12,5 +12,10 @@ class SaludosController < ApplicationController
   def data
   	@hola='Hola'
   end
+
+  def autorizar
+  	puts params
+  	puts "Entro en autorizar"
+  end
   
 end
