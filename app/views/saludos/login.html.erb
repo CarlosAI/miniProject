@@ -1,12 +1,12 @@
 <div class="container">
-  <form class="px-4 py-3 col">
+  <%= form_tag("/iniciar", method: "post") do %>
     <div class="form-group">
       <label for="exampleDropdownFormEmail1">Correo</label>
-      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com" name="email">
     </div>
     <div class="form-group">
       <label for="exampleDropdownFormPassword1">PContraseña</label>
-      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" name="generate">
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="dropdownCheck">
@@ -15,16 +15,29 @@
       </label>
     </div>
     <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-  </form>
+  <% end %>
   <div class="dropdown-divider"></div>
   <a class="dropdown-item" href="/registrar">¿Eres nuevo? Registrate</a>
   <a class="dropdown-item" href="#">¿Olvidaste tu constraseña?</a>
 </div>
 
-<script type="text/javascript"></script>
-
 <% if @mensaje != 1 %>
-  <script type="text/javascript">
-    alert("Usuario creado");
-  </script>
+  <br>
+  <div class="alert alert-success">
+    <strong>Success!</strong> Se creo tu cuenta, ahora inicia sesion. 
+  </div>
+<% end %>
+
+<% if @status != 0 && @status != 3 %>
+  <br>
+  <div class="alert alert-warning">
+    <strong>Warning!</strong> Contraseña incorrecta.
+  </div>
+<% end %>
+
+<% if @status != 0 && @status != 2 %>
+  <br>
+  <div class="alert alert-info">
+    <strong>Info!</strong> Los datos de sesion son incorrectos.
+  </div>
 <% end %>

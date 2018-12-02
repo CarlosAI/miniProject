@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   post '/registrar', to: 'saludos#registrar'
 
   post '/autorizar', to: 'saludos#autorizar'
+  post '/iniciar', to: 'saludos#iniciar'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
