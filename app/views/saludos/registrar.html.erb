@@ -1,24 +1,31 @@
 <div class="container">
-  <form actions="/autorizar">
+  <%= form_tag("/autorizar", method: "post") do %>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email">
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="password">
       </div>
     </div>
     <div class="form-group">
       <label for="inputAddress">Nombre completo</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Nombre">
+      <input type="text" class="form-control" id="inputAddress" placeholder="Nombre" name="nombre">
     </div>
     <div class="form-group">
       <label for="inputAddress2">Nick Name</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Usuario24">
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Usuario24" name="nick">
     </div>
    
     <button type="submit" class="btn btn-primary">Sign in</button>
-  </form>
+  <% end %>
 </div>
+
+
+<% if @mensaje != 1 %>
+  <script type="text/javascript">
+    alert("Something happend");
+  </script>
+<% end %>

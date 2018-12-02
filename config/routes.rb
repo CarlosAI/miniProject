@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   get '/login', to: 'saludos#login'
   get '/registrar', to: 'saludos#registrar'
 
+  post '/login', to: 'saludos#login'
+  post '/registrar', to: 'saludos#registrar'
+
   post '/autorizar', to: 'saludos#autorizar'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
