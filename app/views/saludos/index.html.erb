@@ -1,139 +1,30 @@
 <div id="large-header" class="large-header">
+
 		  <canvas id="demo-canvas"></canvas>
-		   	<ul class="text hidden">
-			  <li>B</li>
-			  <li class="ghost">i</li>
-			  <li class="ghost">e</li>
-			  <li class="ghost">n</li>
-			  <li class="ghost">v</li>
-			  <li class="ghost">e</li>
-			  <li class="ghost">n</li>
-			  <li class="ghost">i</li>
-			  <li class="ghost">d</li>
-			  <li class="ghost">o</li>
-			  <li class="ghost">s&nbsp</li>
-			 <!--  <li class="spaced"></li> -->
-			  <li class="ghost">a&nbsp</li>
-			  <!-- <li class="spaced">&nbsp</li> -->
-			  <li>H</li>
-			  <li class="ghost">o</li>
-			  <li class="ghost">t</li>
-			  <li class="ghost">e</li>
-			  <li class="ghost">l&nbsp</li>
-			  <!-- <li class="spaced">&nbsp</li> -->
-			  <li>S</li>
-			  <li class="ghost">a</li>
-			  <li class="ghost">n&nbsp</li>
-			  <!-- <li class="spaced">&nbsp</li> -->
-			  <li>A</li>
-			  <li class="ghost">n</li>
-			  <li class="ghost">t</li>
-			  <li class="ghost">o</li>
-			  <li class="ghost">n</li>
-			  <li class="ghost">i</li>
-			  <li class="ghost">o</li>
-			  <li class="ghost">!</li>
-			</ul>
+		  <%= render 'prueba' %>
 </div>
 
-		<style type="text/css">
-.large-header {
-	position: relative;
-	width: 100%;
-	
-	overflow: hidden;
-	background-size: all;
-	/*background-position: center center;*/
-	z-index: 1;
-}
 
-#large-header {
-	background-color: black;
-}
-
-.main-title {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	color: #f9f1e9;
-	text-align: center;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate3d(-50%,-50%,0);
-	transform: translate3d(-50%,-50%,0);
-}
-
-.demo-1 .main-title {
-	text-transform: uppercase;
-	font-size: 4.2em;
-	letter-spacing: 0.1em;
-}
-
-.main-title .thin {
-	font-weight: 200;
-}
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.text {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  list-style: none;
-  border-bottom: 0;
-}
-
-.text.hidden {
-  border-bottom: 1px solid #fff;
-}
-
-.text li {
-  display: inline-block;
-  float: left;
-  font-weight: 700;
-  font-size: 2em;
-  color: #fff;
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-  max-width: 2em;
-}
-.text.hidden li.spaced {
-  padding-left: 0;
-}
-.text li.spaced {
-  padding-left: 0.5em;
-}
-
-.text.hidden li.ghost {
-  opacity: 0;
-  max-width: 0;
-}
-
-@media only screen and (max-width : 768px) {
-	.demo-1 .main-title {
-		font-size: 3em;
+<style type="text/css">
+	.large-header {
+		position: relative;
+		width: 100%;
+		
+		overflow: hidden;
+		background-size: all;
+		/*background-position: center center;*/
+		z-index: 1;
 	}
-}
+
+	#large-header {
+		background-color: black;
+	}
+
+
 </style>
 <script type="text/javascript">
 
-	$(function() {
-  var text = $(".text");
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 50) {
-      text.removeClass("hidden");
-    } else {
-      text.addClass("hidden");
-    }
-  });
-});
+	
 
 	(function() {
 
@@ -319,7 +210,7 @@
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
     
-})();
+	})();
 </script>
 
 

@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   get 'data', to: 'saludos#data'
 
+  get '/nosotros', to: 'saludos#nosotros'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
